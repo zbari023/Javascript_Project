@@ -202,49 +202,68 @@ console.log('Welcome')
 const todoInput = document.querySelector('.todo-input')
 const todoBtn = document.querySelector('.todo-btn')
 const todoResult = document.querySelector('.todores')
+
 function addTodo(e) {
     e.preventDefault();
 
     const todoli = document.createElement("li")
     todoli.classList.add('border')
-    todoli.classList.add('my-2')
+    todoli.classList.add('my-5')
 
-    const todotitle=document.createElement('h4')
+    const todotitle = document.createElement('h4')
     todotitle.classList.add('d-inline-block')
     todotitle.classList.add('me-5')
     todotitle.classList.add('fw-bolder')
-    todotitle.innerText=todoInput.value
+    todotitle.innerText = todoInput.value
     todoli.appendChild(todotitle)
 
-    const Btntr=document.createElement('button')
+
+    const todoAction = document.createElement('div')
+    todoAction.classList.add('action-div')
+    todoAction.classList.add('d-inline-block')
+    todoAction.classList.add('float-end')
+
+
+
+
+
+    const Btntr = document.createElement('button')
     Btntr.classList.add('btn')
     Btntr.classList.add('btn-primary')
-    Btntr.classList.add('ms-5')
     Btntr.classList.add('me-1')
-    Btntr.innerHTML='<i class="fa-solid fa-plus"></i>'
-    todoli.appendChild(Btntr)
+    Btntr.innerHTML = '<i class="fa-solid fa-plus"></i>'
+    todoAction.appendChild(Btntr)
 
 
-    const Btnde=document.createElement('button')
+    const Btnde = document.createElement('button')
     Btnde.classList.add('btn')
     Btnde.classList.add('btn-danger')
-    Btnde.classList.add('ms-3')
-    Btnde.innerHTML='<i class="fa-solid fa-trash"></i>'
-    todoli.appendChild(Btnde)
-   
+    Btnde.innerHTML = '<i class="fa-solid fa-trash"></i>'
+    todoAction.appendChild(Btnde)
 
-    
+
+    todoli.appendChild(todoAction)
     todoResult.appendChild(todoli)
- 
-
-
-
-
-
-
-
-
-    console.log(todoInput.value)
     todoInput.value = '';
+
+
+
 }
-todoBtn.addEventListener('click', addTodo)     
+function todoToggle(e) {
+
+    console.log('in toggle')
+    const item = e.target
+    if (item.classList[1] == 'fa-plus') {
+        console.log('truech')
+        const taskli = item.parentElement.parentElement.parentElement
+        taskli.childNodes[0].classList.toggle('truech')
+    }
+    else if (item.classList[1] == 'fa-trash') {
+        console.log('delete')
+        const taskli = item.parentElement.parentElement.parentElement.classList.toggle('delete')
+       
+    }
+}
+todoBtn.addEventListener('click', addTodo)
+todoResult.addEventListener('click', todoToggle)
+

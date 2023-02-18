@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>TodoApp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -24,12 +24,12 @@
             <h1 class="fw-bolder text-warning text-center">ToDo App</h1>
             <form class="row g-3">
 
-                <div class="col-9 mt-5 mx-auto text-center">
+                <div class="col-10 mt-5 mx-auto text-center">
                     <label for="inputPassword2" class="visually-hidden d-inline-block ">Password</label>
                     <input type="text" class="form-control fw-bolder todo-input" id="input"
                         placeholder="Enter your Task please "> <!-- todo siehe code.js-->
                 </div>
-                <div class="col-3 mt-5 mx-auto text-center">
+                <div class="col-2 mt-5 mx-auto text-center">
                     <button type="submit" class="btn btn-warning mb-3 todo-btn"> <!-- todo siehe code.js-->
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus"
                             width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -48,34 +48,18 @@
     <div class="row mt-5">
         <div class="col-5 mx-auto  my-5 py-5 px-4">
             <ul class="list-unstyled todores ">
-                <!-- um de Task zu lösen und wieder ein li wie unten zu erstellen aber in code.js-->
-                <!--  <li>
-                    <h4 class="d-inline-block me-5 fw-bolder">learning Javascript</h4>
 
-                    <button type="button" class="btn btn-primary ms-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check-filled"
-                            width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path
-                                d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
-                                stroke-width="0" fill="currentColor"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-off"
-                            width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M3 3l18 18"></path>
-                            <path d="M4 7h3m4 0h9"></path>
-                            <path d="M10 11l0 6"></path>
-                            <path d="M14 14l0 3"></path>
-                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l.077 -.923"></path>
-                            <path d="M18.384 14.373l.616 -7.373"></path>
-                            <path d="M9 5v-1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
-                        </svg>
-                    </button>
+                <!-- um de Task zu lösen und wieder ein li wie unten zu erstellen aber in code.js-->
+               <!--  <li>
+                    <h4 class=" me-5 fw-bolder d-inline-block">learning Javascript</h4>
+                    <div class="action-div ">
+                        <button type="button" class="btn btn-primary ms-5">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
                 </li> -->
             </ul>
         </div>

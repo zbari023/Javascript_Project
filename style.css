@@ -21,3 +21,9 @@ body{
     background:linear-gradient(90deg, rgba(128, 32, 0, 1) 0%, rgba(238, 130, 238, 1) 100%);
 
 }
+.truech{
+text-decoration: line-through;
+}
+.delete{
+    display: none;
+}
